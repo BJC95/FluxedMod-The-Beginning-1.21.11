@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SODIUM);
                         output.accept(ModItems.SODIUM_CHUNK);
                         output.accept(ModBlocks.SODIUM_BLOCK);
+
                         output.accept(ModItems.MODULARIUM);
                         output.accept(ModBlocks.MODULARIUM_BLOCK);
                         output.accept(ModItems.MODULAR_SWORD);
@@ -29,6 +30,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MODULAR_AXE);
                         output.accept(ModItems.MODULAR_SHOVEL);
                         output.accept(ModItems.MODULAR_HOE);
+                        output.accept(ModItems.MODULAR_SPEAR);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -9,9 +9,12 @@
   "item.flx_the_beginning.modularium_axe": "Modularium Axe",
   "item.flx_the_beginning.modularium_shovel": "Modularium Shovel",
   "item.flx_the_beginning.modularium_hoe": "Modularium Hoe",
+  "item.flx_the_beginning.modularium_spear": "Modularium Spear",
 
   "block.flx_the_beginning.sodium_block": "Sodium Block",
   "block.flx_the_beginning.modularium_block": "Modularium Block",
+
+  "enchantment.flx_the_beginning.hollow": "Hollow",
 
 
   "creativetab.flx_the_beginning.the_beginning_tab": "The Beginning"

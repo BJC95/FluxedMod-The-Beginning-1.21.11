@@ -2,6 +2,8 @@ package net.fluxed.beginning;
 
 import com.mojang.logging.LogUtils;
 import net.fluxed.beginning.block.ModBlocks;
+import net.fluxed.beginning.enchantment.ModEnchantmentEffects;
+import net.fluxed.beginning.enchantment.ModEnchantments;
 import net.fluxed.beginning.item.ModCreativeModeTabs;
 import net.fluxed.beginning.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +44,7 @@ public class TheBeginning {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
