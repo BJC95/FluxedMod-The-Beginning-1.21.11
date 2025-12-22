@@ -1,6 +1,8 @@
 package net.fluxed.beginning;
 
 import com.mojang.logging.LogUtils;
+import net.fluxed.beginning.block.ModBlocks;
+import net.fluxed.beginning.item.ModCreativeModeTabs;
 import net.fluxed.beginning.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
@@ -36,7 +38,10 @@ public class TheBeginning {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -50,9 +55,11 @@ public class TheBeginning {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SODIUM);
+            event.accept(ModItems.SODIUM_CHUNK);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SODIUM_BLOCK);
 
         }
     }

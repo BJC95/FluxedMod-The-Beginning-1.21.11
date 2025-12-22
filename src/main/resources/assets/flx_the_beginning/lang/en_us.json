@@ -1,7 +1,18 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
-  "item.examplemod.example_item": "Example Item",
+  "item.flx_the_beginning.sodium_ingot": "Sodium Ingot",
+  "item.flx_the_beginning.sodium_chunk": "Sodium Chunk",
+  "item.flx_the_beginning.modularium_ingot": "Modularium Ingot",
 
-  "item.flx_the_beginning.sodium_ingot": "Sodium Ingot"
+
+  "item.flx_the_beginning.modularium_sword": "Modularium Sword",
+  "item.flx_the_beginning.modularium_pickaxe": "Modularium Pickaxe",
+  "item.flx_the_beginning.modularium_axe": "Modularium Axe",
+  "item.flx_the_beginning.modularium_shovel": "Modularium Shovel",
+  "item.flx_the_beginning.modularium_hoe": "Modularium Hoe",
+
+  "block.flx_the_beginning.sodium_block": "Sodium Block",
+  "block.flx_the_beginning.modularium_block": "Modularium Block",
+
+
+  "creativetab.flx_the_beginning.the_beginning_tab": "The Beginning"
 }
