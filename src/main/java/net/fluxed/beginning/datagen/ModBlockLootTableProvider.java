@@ -1,6 +1,7 @@
 package net.fluxed.beginning.datagen;
 
 import net.fluxed.beginning.block.ModBlocks;
+import net.fluxed.beginning.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -27,6 +28,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.SODIUM_BLOCK.get());
         dropSelf(ModBlocks.MODULARIUM_BLOCK.get());
+
+        createMultipleOreDrops(ModBlocks.SODIUM_ORE.get(), ModItems.SODIUM_CHUNK.get(), 1, 3);
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

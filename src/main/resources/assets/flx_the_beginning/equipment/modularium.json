@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "flx_the_beginning:modularium"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "flx_the_beginning:modularium"
+      }
+    ]
+  }
+}

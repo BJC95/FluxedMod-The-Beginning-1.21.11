@@ -2,6 +2,8 @@
   "item.flx_the_beginning.sodium_ingot": "Sodium Ingot",
   "item.flx_the_beginning.sodium_chunk": "Sodium Chunk",
   "item.flx_the_beginning.modularium_ingot": "Modularium Ingot",
+  "item.flx_the_beginning.levity_berry": "Levity Berry",
+  "item.flx_the_beginning.roasted_levity_berry": "Roasted Levity Berry",
 
 
   "item.flx_the_beginning.modularium_sword": "Modularium Sword",
@@ -10,6 +12,10 @@
   "item.flx_the_beginning.modularium_shovel": "Modularium Shovel",
   "item.flx_the_beginning.modularium_hoe": "Modularium Hoe",
   "item.flx_the_beginning.modularium_spear": "Modularium Spear",
+  "item.flx_the_beginning.modularium_helmet": "Modularium Helmet",
+  "item.flx_the_beginning.modularium_chestplate": "Modularium Chestplate",
+  "item.flx_the_beginning.modularium_leggings": "Modularium Leggings",
+  "item.flx_the_beginning.modularium_boots": "Modularium Boots",
 
   "block.flx_the_beginning.sodium_block": "Sodium Block",
   "block.flx_the_beginning.modularium_block": "Modularium Block",

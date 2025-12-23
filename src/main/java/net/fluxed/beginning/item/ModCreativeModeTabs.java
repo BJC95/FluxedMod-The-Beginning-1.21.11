@@ -31,6 +31,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MODULAR_SHOVEL);
                         output.accept(ModItems.MODULAR_HOE);
                         output.accept(ModItems.MODULAR_SPEAR);
+                        output.accept(ModItems.MODULARIUM_HELMET);
+                        output.accept(ModItems.MODULARIUM_CHESTPLATE);
+                        output.accept(ModItems.MODULARIUM_LEGGINGS);
+                        output.accept(ModItems.MODULARIUM_BOOTS);
+
+                        output.accept(ModItems.FLOAT_BERRY);
+                        output.accept(ModItems.COOKED_FLOAT_BERRY);
 
                     }).build());
 

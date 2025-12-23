@@ -35,7 +35,10 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SODIUM_BLOCK = registerBlock("sodium_block",
             (properties) -> new Block(properties
-                    .strength(1.2f).explosionResistance(4).requiresCorrectToolForDrops().sound(SoundType.IRON)));
+                    .strength(1.2f).explosionResistance(5).requiresCorrectToolForDrops().sound(SoundType.IRON)));
+    public static final DeferredBlock<Block> SODIUM_ORE = registerBlock("sodium_ore",
+            (properties) -> new Block(properties
+                    .strength(3.2f).explosionResistance(12).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> MODULARIUM_BLOCK = registerBlock("modularium_block",
             (properties) -> new Block(properties
                     .strength(10).explosionResistance(40).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));

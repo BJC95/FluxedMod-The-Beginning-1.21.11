@@ -22,6 +22,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SODIUM_BLOCK.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.MODULARIUM_BLOCK.get());
+                .add(ModBlocks.MODULARIUM_BLOCK.get())
+                .add(ModBlocks.SODIUM_ORE.get());
     }
 }
