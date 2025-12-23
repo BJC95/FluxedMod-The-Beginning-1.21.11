@@ -18,7 +18,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SODIUM_BLOCK.get())
-                .add(ModBlocks.MODULARIUM_BLOCK.get());
+                .add(ModBlocks.MODULARIUM_BLOCK.get())
+                .add(ModBlocks.SODIUM_ORE.get());
+
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SODIUM_BLOCK.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL)

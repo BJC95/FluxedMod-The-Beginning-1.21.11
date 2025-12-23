@@ -3,9 +3,9 @@ package net.fluxed.beginning;
 import com.mojang.logging.LogUtils;
 import net.fluxed.beginning.block.ModBlocks;
 import net.fluxed.beginning.enchantment.ModEnchantmentEffects;
-import net.fluxed.beginning.enchantment.ModEnchantments;
 import net.fluxed.beginning.item.ModCreativeModeTabs;
 import net.fluxed.beginning.item.ModItems;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -20,6 +20,8 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerXpEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
@@ -34,9 +36,10 @@ public class TheBeginning {
     public TheBeginning(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        NeoForge.EVENT_BUS.addListener(TheBeginning::onXPpickup);
 
         // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
+        // Note that this is necessary if and only if we want *this* class (TheBeginning) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
@@ -48,6 +51,14 @@ public class TheBeginning {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+    }
+
+    public static void onXPpickup(PlayerXpEvent.PickupXp event) {
+        Player player = event.getEntity();
+        if (!player.level().isClientSide()) {
+            player.heal(2.0f);
+            player.getFoodData().eat(2,0.2f);
+        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

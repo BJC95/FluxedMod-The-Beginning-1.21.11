@@ -14,8 +14,8 @@ public class ModEnchantmentEffects {
     public static final DeferredRegister<MapCodec<? extends EnchantmentEntityEffect>> ENTITY_ENCHANTMENT_EFFECTS =
             DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, TheBeginning.MOD_ID);
 
-//    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
-//            ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker", () -> LightningStrikerEnchantmentEffect.CODEC);
+//    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> SPEAR_BURST =
+//            ENTITY_ENCHANTMENT_EFFECTS.register("burst_back", () -> SpearWindBurstEnchantmentEffect.CODEC);
 
     public static void register(IEventBus eventBus) {
         ENTITY_ENCHANTMENT_EFFECTS.register(eventBus);

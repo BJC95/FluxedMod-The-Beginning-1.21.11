@@ -44,6 +44,7 @@ public class ModModelProvider extends ModelProvider {
         // --BLOCKS--
         blockModels.createTrivialCube(ModBlocks.SODIUM_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.MODULARIUM_BLOCK.get());
+        blockModels.createTrivialCube(ModBlocks.SODIUM_ORE.get());
     }
     @Override
     protected Stream<? extends Holder<Block>> getKnownBlocks() {

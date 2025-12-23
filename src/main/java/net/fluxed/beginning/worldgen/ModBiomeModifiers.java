@@ -47,10 +47,10 @@ public class ModBiomeModifiers {
 //                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_BISMUTH_ORE_PLACED_KEY)),
 //                GenerationStep.Decoration.UNDERGROUND_ORES));
 
-//        context.register(ADD_SODIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-//                biomes.getOrThrow(BiomeTags.IS_END),
-//                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_BISMUTH_ORE_PLACED_KEY)),
-//                GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(ADD_SODIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SODIUM_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
 //
 //        context.register(ADD_TREE_BLOODWOOD, new BiomeModifiers.AddFeaturesBiomeModifier(
 //                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.SAVANNA)),

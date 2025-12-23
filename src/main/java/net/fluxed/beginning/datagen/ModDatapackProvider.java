@@ -7,6 +7,9 @@ import net.fluxed.beginning.enchantment.ModEnchantments;
 //import net.fluxed.beginning.worldgen.ModBiomeModifiers;
 //import net.fluxed.beginning.worldgen.ModConfiguredFeatures;
 //import net.fluxed.beginning.worldgen.ModPlacedFeatures;
+import net.fluxed.beginning.worldgen.ModBiomeModifiers;
+import net.fluxed.beginning.worldgen.ModConfiguredFeatures;
+import net.fluxed.beginning.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -21,11 +24,11 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
 //            .add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap)
 //            .add(Registries.TRIM_PATTERN, ModTrimPatterns::bootstrap)
-            .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap);
+            .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap)
 
-//            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
-//            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-//            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
+            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(TheBeginning.MOD_ID));
