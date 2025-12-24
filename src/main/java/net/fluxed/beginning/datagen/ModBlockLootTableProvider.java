@@ -29,6 +29,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.SODIUM_BLOCK.get());
         dropSelf(ModBlocks.MODULARIUM_BLOCK.get());
+        dropSelf(ModBlocks.MODULARIUM_PLATING.get());
+        dropSelf(ModBlocks.MODULARIUM_STAIRS.get());
+        dropSelf(ModBlocks.MODULARIUM_SLAB.get());
+        dropSelf(ModBlocks.MODULARIUM_WALL.get());
         add(ModBlocks.SODIUM_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.SODIUM_ORE.get(), ModItems.SODIUM_CHUNK.get(), 1,3)
                 );

@@ -17,11 +17,17 @@
   "item.flx_the_beginning.modularium_leggings": "Modularium Leggings",
   "item.flx_the_beginning.modularium_boots": "Modularium Boots",
 
-  "block.flx_the_beginning.sodium_block": "Sodium Block",
-  "block.flx_the_beginning.modularium_block": "Modularium Block",
+  "block.flx_the_beginning.sodium_block": "Block of Sodium",
+  "block.flx_the_beginning.modularium_block": "Block of Modularium",
+  "block.flx_the_beginning.modularium_plating": "Modularium Plating",
+  "block.flx_the_beginning.modularium_stairs": "Modularium Stairs",
+  "block.flx_the_beginning.modularium_slab": "Modularium Slab",
+  "block.flx_the_beginning.modularium_wall": "Modularium Wall",
 
   "enchantment.flx_the_beginning.hollow": "Hollow",
-  "enchantment.flx_the_beginning.burst_back": "Burst Back",
+  "enchantment.flx_the_beginning.burst_back": "Springy",
+
+  "effect.flx_the_beginning.xp_heal": "Energy Sapping",
 
 
   "creativetab.flx_the_beginning.the_beginning_tab": "The Beginning"

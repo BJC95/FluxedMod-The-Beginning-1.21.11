@@ -2,9 +2,11 @@ package net.fluxed.beginning;
 
 import com.mojang.logging.LogUtils;
 import net.fluxed.beginning.block.ModBlocks;
+import net.fluxed.beginning.effect.ModEffects;
 import net.fluxed.beginning.enchantment.ModEnchantmentEffects;
 import net.fluxed.beginning.item.ModCreativeModeTabs;
 import net.fluxed.beginning.item.ModItems;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
@@ -48,6 +50,7 @@ public class TheBeginning {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -55,9 +58,11 @@ public class TheBeginning {
 
     public static void onXPpickup(PlayerXpEvent.PickupXp event) {
         Player player = event.getEntity();
-        if (!player.level().isClientSide()) {
-            player.heal(2.0f);
-            player.getFoodData().eat(2,0.2f);
+        if (player.hasEffect(ModEffects.XP_HEAL)) {
+            if (!player.level().isClientSide()) {
+                player.heal(2.0f);
+                player.getFoodData().eat(2, 0.2f);
+            }
         }
     }
 
@@ -65,7 +70,6 @@ public class TheBeginning {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SODIUM);

@@ -5,10 +5,7 @@ import net.fluxed.beginning.block.ModBlocks;
 import net.fluxed.beginning.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -52,7 +49,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("SS")
                 .pattern("SS")
                 .define('S', ModItems.SODIUM_CHUNK.get())
-                .unlockedBy("has_sodium_chunk", has(ModItems.SODIUM)).save(output, "sodium_ingot_from_chunk");
+                .unlockedBy("has_sodium_chunk", has(ModItems.SODIUM)).save(output, "flx_the_beginning:sodium_ingot_from_chunk");
         shapeless(RecipeCategory.MISC, ModItems.SODIUM.get(), 9)
                 .requires(ModBlocks.SODIUM_BLOCK)
                 .unlockedBy("has_sodium_block", has(ModBlocks.SODIUM_BLOCK)).save(output);
@@ -67,13 +64,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.SODIUM)
                 .requires(Items.NETHERITE_SCRAP)
                 .requires(Items.NETHERITE_SCRAP)
-                .unlockedBy("has_sodium", has(ModItems.SODIUM)).save(output);
+                .unlockedBy("has_sodium", has(ModItems.SODIUM)).save(output, "flx_the_beginning:modularium_ingot_alloy");
         shaped(RecipeCategory.MISC, ModBlocks.MODULARIUM_BLOCK.get())
                 .pattern("MMM")
                 .pattern("MMM")
                 .pattern("MMM")
                 .define('M', ModItems.MODULARIUM.get())
                 .unlockedBy("has_modularium", has(ModItems.MODULARIUM)).save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.MODULARIUM.get(), 9)
+                .requires(ModBlocks.MODULARIUM_BLOCK)
+                .unlockedBy("has_modularium_block", has(ModBlocks.MODULARIUM_BLOCK)).save(output);
+        shaped(RecipeCategory.MISC, ModBlocks.MODULARIUM_PLATING.get(),32)
+                .pattern("MM")
+                .pattern("MM")
+                .define('M', ModItems.MODULARIUM.get())
+                .unlockedBy("has_modularium", has(ModItems.MODULARIUM)).save(output);
+        stairBuilder(ModBlocks.MODULARIUM_STAIRS.get(), Ingredient.of(ModBlocks.MODULARIUM_PLATING)).group("modularium_plating")
+                .unlockedBy("has_modularium", has(ModItems.MODULARIUM)).save(output);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MODULARIUM_SLAB.get(), ModBlocks.MODULARIUM_PLATING.get());
+        wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MODULARIUM_WALL.get(), ModBlocks.MODULARIUM_PLATING.get());
 
         oreSmelting(output, List.of(ModItems.FLOAT_BERRY.get()),
                 RecipeCategory.FOOD, ModItems.COOKED_FLOAT_BERRY.get(),
@@ -88,7 +98,6 @@ public class ModRecipeProvider extends RecipeProvider {
         oreBlasting(output, List.of(ModBlocks.SODIUM_ORE.get()),
                 RecipeCategory.MISC, ModItems.SODIUM.get(),
                 0.25f,100,"sodium_smelt");
-
     }
 
     protected void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

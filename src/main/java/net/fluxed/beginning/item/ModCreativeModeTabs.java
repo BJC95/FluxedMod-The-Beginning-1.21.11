@@ -35,6 +35,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MODULARIUM_CHESTPLATE);
                         output.accept(ModItems.MODULARIUM_LEGGINGS);
                         output.accept(ModItems.MODULARIUM_BOOTS);
+                        output.accept(ModBlocks.MODULARIUM_PLATING);
+                        output.accept(ModBlocks.MODULARIUM_SLAB);
+                        output.accept(ModBlocks.MODULARIUM_STAIRS);
+                        output.accept(ModBlocks.MODULARIUM_WALL);
 
                         output.accept(ModItems.FLOAT_BERRY);
                         output.accept(ModItems.COOKED_FLOAT_BERRY);

@@ -36,6 +36,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.MODULAR_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.MODULAR_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateSpear(ModItems.MODULAR_SPEAR.get());
+
         itemModels.generateTrimmableItem(ModItems.MODULARIUM_HELMET.get(), ModArmorMaterials.MODULARIUM, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModels.generateTrimmableItem(ModItems.MODULARIUM_CHESTPLATE.get(), ModArmorMaterials.MODULARIUM, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModels.generateTrimmableItem(ModItems.MODULARIUM_LEGGINGS.get(), ModArmorMaterials.MODULARIUM, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
@@ -45,6 +46,11 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.SODIUM_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.MODULARIUM_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.SODIUM_ORE.get());
+
+        blockModels.family(ModBlocks.MODULARIUM_PLATING.get())
+                .wall(ModBlocks.MODULARIUM_WALL.get())
+                .slab(ModBlocks.MODULARIUM_SLAB.get())
+                .stairs(ModBlocks.MODULARIUM_STAIRS.get());
     }
     @Override
     protected Stream<? extends Holder<Block>> getKnownBlocks() {
